@@ -1,0 +1,45 @@
+<div class="container mt-5 mb-5">
+  <div class="row no-gutters">
+    <div class="col-md-4 col-lg-4">
+      <img [src]="musician?.imageUrl" class="img-fluid">
+    </div>
+    <div class="col-md-8 col-lg-8">
+      <div class="d-flex flex-column">
+        <div class="d-flex flex-row justify-content-between align-items-center p-5 bg-dark text-white musician-info">
+          <h3 class="display-5">{{musician?.name}}</h3>
+          <button class="btn btn-dark" (click)="addAlbum()" type="button">Add Album</button>
+        </div>
+        <div class="p-3 bg-black text-white">
+          <h6>{{musician?.description}}</h6>
+        </div>
+        <div class="row row-cols-md-4 g-2 " *ngIf="musician.albums.length !== 0" >
+            <div class="col d-flex align-items-stretch" *ngFor="let album of musician?.albums" (click)="goToAlbumDetails(album.id)">
+              <div class="card text-white mt-3">
+                <div style="text-align: center;" >
+                  <img [src]="album.coverUrl" class="card-img-top w-75 h-100 pt-3 album-cover img-fluid">
+                </div>
+                <div class="card-body text-center">
+                  <h3 class="card-title">{{album?.name | uppercase}}</h3>
+                </div>
+              </div>
+          </div>
+        </div>
+        <br>
+
+      </div>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-secondary songs" *ngFor="let song of musician.songs">
+        <div class="row">
+          <div class="col-1">
+            <img [src]="song.imageUrl" class="img-fluid w-auto h-75" >
+          </div>
+          <div class="col-2">
+            <h6><strong>{{song.name}} </strong></h6>
+            <h6>{{song.albumName}}</h6>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

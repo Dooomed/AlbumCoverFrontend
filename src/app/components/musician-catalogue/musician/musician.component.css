@@ -1,0 +1,17 @@
+.card:hover {
+  transform: scale(1.007);
+}
+
+.card {
+  background: #626262;
+  border-radius: 10px;
+}
+
+.card-img {
+  height: 25vw;
+  width: auto;
+}
+
+.img-fluid {
+  border-radius: 10px;
+}

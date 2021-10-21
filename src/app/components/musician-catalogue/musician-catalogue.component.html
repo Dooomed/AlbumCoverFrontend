@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-4 mt-3 h-auto" >
+    <div class="col" *ngFor="let musician of musicians">
+    <app-musician [musician]="musician" (click)="goToDetails(musician.id)"></app-musician>
+    </div>
+  </div>
+</div>

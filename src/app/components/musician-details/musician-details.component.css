@@ -1,0 +1,42 @@
+img {
+  width: 416px;
+  height: 416px
+}
+
+.bg-black {
+  background: #000
+}
+
+/*.skill-block {
+  margin-right: 3px;
+  width: 30%;
+  border-right: black 5px;
+  border-radius: 10px;
+}*/
+
+.card:hover {
+  transform: scale(1.009);
+}
+
+body {
+  background-color: #eeeeee
+}
+
+.card {
+  border-radius: 10px;
+  background-color: lightsteelblue!important;
+}
+
+.songs:hover{
+  transform: scale(1.003);
+  opacity: 0.8;
+}
+
+.img-fluid {
+  border-radius: 10px;
+}
+.musician-info {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+

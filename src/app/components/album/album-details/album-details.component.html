@@ -1,0 +1,13 @@
+<div class="container">
+  <h2 class="text-center text- pt-3 pb-2"><strong>{{this.album.name | uppercase}}</strong></h2>
+  <div style="text-align: center">
+    <img [src]="album.coverUrl" class="w-auto h-50">
+  </div>
+  <br>
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-secondary pt-3" *ngFor="let song of album.songs">
+      <h5>> {{song.name}}</h5>
+    </li>
+  </ul>
+</div>
+<br>

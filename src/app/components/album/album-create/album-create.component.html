@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="card my-5 bg-dark">
+    <div class="card-title m-3">
+      Create Album
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="input-group-text">
+              <label>Name </label>
+              <input type="text" [(ngModel)]="album.name" class="form-control" id="name" name="name" placeholder="Name">
+            <label>Cover url </label>
+            <input type="url" [(ngModel)]="album.coverUrl" class="form-control" id="image" name="image" placeholder="Cover Url">
+
+        </div>
+        <img [src]="album.coverUrl" [hidden]="!album.coverUrl" class="img-thumbnail" height="300" width="300" alt=""><hr>
+
+        <div *ngFor="let song of songs">
+          <app-song-create [song]="song"></app-song-create>
+          <br>
+        </div>
+        <div class="btn-group pt-3">
+          <button (click)="newSong()" class="btn btn-dark">New Song</button>
+        </div>
+        <hr>
+
+        <div>
+          <button (click)="saveAlbum()" class="btn btn-dark w-100">Apply album</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

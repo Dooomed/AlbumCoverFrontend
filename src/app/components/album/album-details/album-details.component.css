@@ -1,0 +1,10 @@
+.list-group-item:hover {
+  transform: scale(1.004);
+}
+img:hover {
+  transform: scale(1.004);
+}
+
+img {
+  border-radius: 10px;
+}
